@@ -1,3 +1,4 @@
+const chalk = require('chalk')
 var readlineSync = require("readline-sync")
 var score = 0;
 var highScores = [
@@ -29,7 +30,7 @@ var questions = [{
 function hello() {
   var userName = readlineSync.question('What is your name? ');
 
-  console.log('Hello! ' + userName + ', Welcome to how much do you know your friend?')
+  console.log('Hello! ' + (chalk.green(userName)) + ', Welcome to how much do you know your friend?')
 }
 function quiz(question, answer) {
   var ans = readlineSync.question(question);
