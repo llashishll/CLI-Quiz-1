@@ -12,19 +12,19 @@ var highScores = [
   }];
 var questions = [{
   question: "What is Ashish's surname? ",
-  answer: "Kalra"
+  answer: "kalra"
 }, {
-  question: "What is Ashish's age? ",
-  answer: "28"
+  question: "What is Ashish's favourite passtime ? ",
+  answer: "gaming"
 }, {
   question: "Is Ashish's taller than 6 Feet? ",
-  answer: "No"
+  answer: "no"
 }, {
   question: "Where does Ashish live? ",
-  answer: "Alwar"
+  answer: "alwar"
 }, {
   question: "What is Ashish favorite video game? ",
-  answer: "Red Dead Redemption 2"
+  answer: "red dead redemption 2"
 }
 ];
 function hello() {
@@ -34,7 +34,7 @@ function hello() {
 }
 function quiz(question, answer) {
   var ans = readlineSync.question(question);
-  if (ans === answer) {
+  if (ans.toLowerCase() === answer) {
     console.log(chalk.green("You are right!"));
     score = score + 1;
   } else {
