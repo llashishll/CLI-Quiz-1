@@ -23,22 +23,22 @@ var questions = [{
   question: "Where does Ashish live? ",
   answer: "Alwar"
 }, {
-  question: "What is Ashish favourite video game? ",
+  question: "What is Ashish favorite video game? ",
   answer: "Red Dead Redemption 2"
 }
 ];
 function hello() {
   var userName = readlineSync.question('What is your name? ');
 
-  console.log('Hello! ' + (chalk.green(userName)) + ', Welcome to how much do you know your friend?')
+  console.log('Hello! ' + (chalk.green(userName)) + ', Welcome to how well do you know me?')
 }
 function quiz(question, answer) {
   var ans = readlineSync.question(question);
   if (ans === answer) {
-    console.log("You are right!");
+    console.log(chalk.green("You are right!"));
     score = score + 1;
   } else {
-    console.log("Wrong Answer");
+    console.log(chalk.red("Wrong Answer"));
   } console.log("current score: ", score);
   console.log("-------------")
 }
