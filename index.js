@@ -48,6 +48,14 @@ function loopy() {
     quiz(questions[i].question, questions[i].answer);
   }
 }
+function showScores() {
+console.log(chalk.blue("Your Final Score is : ", score));
+
+console.log(chalk.blue("Check out the high scores, if you should be there ping me and I'll update it"));
+
+  highScores.map(score => console.log(score.name, " : ", score.score))
+}
 hello()
 loopy()
+showScores()
 
